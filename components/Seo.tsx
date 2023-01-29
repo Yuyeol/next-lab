@@ -1,13 +1,9 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 interface Props {
   title: string;
 }
 
 export default function Seo({ title }: Props) {
-  return (
-    <Head>
-      <title>Page | {title}</title>
-    </Head>
-  );
+  return <NextSeo title={`Page | ${title}`} />;
 }
